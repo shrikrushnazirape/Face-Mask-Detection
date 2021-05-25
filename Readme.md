@@ -4,6 +4,7 @@
 1. Detect faces using cvlib.detect_faces
 2. Apply model to classifiy if the face is masked or not 
 
+
 ### Task 2 Detections of social distancing
 3. Detect bounding boxes of person using cvlib.detect_common_objects 
 4. calculate centroid for all boxes
