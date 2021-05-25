@@ -1,0 +1,114 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#container {
+    min-height: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 20px !important;
+    
+    /* border: 2px solif rgba(214, 178, 178, 0.561); */
+}
+.divide{
+    background-color: rgba(255, 255, 255, 0.527);
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-bottom: 10px !important;
+    
+}
+li:hover {
+    color: rgb(33, 109, 209);
+    /* font-size: 20px; */
+    /* text-shadow: 1px 1px #000; */
+    cursor: pointer;
+  }
+.home{
+    
+    background-color: #222831;
+    min-height: 100vh;
+    color: azure;
+    padding: 10px !important;
+    align-items: center;
+   
+        -webkit-box-shadow:inset 0px 0px 0px 10px rgb(102, 203, 212);
+        -moz-box-shadow:inset 0px 0px 0px 10px rgb(52, 199, 209);
+        box-shadow:inset 0px 0px 0px 10px rgba(122, 178, 180, 0.431);
+    
+}
+
+.vid{
+    width: 90%;
+    margin: 10px !important;
+    padding: 20px !important;
+    border: 2px solid rgba(255, 255, 255, 0.424);
+    margin-bottom: 10px !important;
+}
+.vidcon{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalcnt{
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+    border: 2px solid rgba(255, 255, 255, 0.192);
+    font-size: 25px;
+    justify-content: space-around !important;
+    align-items: center;
+    /* justify-content: center;
+    align-items: center;
+    width: 90% !important;
+    margin: 5px !important;
+    padding: 20px !important;
+     */
+}
+
+.pncount{
+    margin: 50px !important;
+    padding: 20px !important;
+}
+.ptive{
+   /* margin-right: 5px !important; */
+   max-width: 50% !important;
+   border: 2px solid rebeccapurple;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.namerow{
+    margin-top: 10px !important;
+    padding: 8px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90% !important;
+    margin-left: 5%!important;
+    border: 2px solid rgba(255, 255, 255, 0.322);
+    
+}
+.buffer{
+    height: 50px;
+}
+
+.count{
+    font-size: 40px;
+    font-weight: 800;
+}

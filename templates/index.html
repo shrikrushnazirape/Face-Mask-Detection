@@ -1,315 +1,93 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>mask distance</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>home page</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <style type="text/css">
-      * {
-        font-family: Montserrat, sans-serif;
-        box-sizing: border-box;
-      }
-      .header {
-        background-color: black;
-        color: white;
-        width: 100%;
-        padding: 10px 40px;
-        margin: 0%;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-      #but {
-        background-color: #4caf50;
-        border: none;
-        color: white;
-        /*padding: 20px;*/
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        padding: 8px 15px;
-        border-radius: 12px;
-      }
-      #but:hover {
-        color: green;
-        background-color: white;
-        border: 1px solid green;
-        cursor: pointer;
-      }
-      #container {
-        background-color: black;
-        height: 300px;
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 3%;
-      }
-      #b {
-        height: 40px;
-        width: 60px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1%;
-        margin-top: 2%;
-      }
-      .cont2 {
-        float: left;
-        width: 50%;
-      }
-      .right {
-        padding: 2em;
-        margin-top: 1.5%;
-        /* margin-right: 2%; */
-        float: right;
-        background-color: #e5e5e5;
-        /* height: 640px; */
-        width: 300px;
-        margin-bottom: 1%;
-      }
-      .stat {
-        padding: 2em;
-        margin-top: 1.5%;
-        float: left;
-        position: relative;
-        background-color: #e5e5e5;
-        /* height: 640px; */
-        width: 290px;
-        margin-left: 3%;
-        /* margin-right: auto; */
-      }
-      li {
-        font-size: 18px;
-      }
-      li:hover {
-        color: rgb(33, 109, 209);
-        /* font-size: 20px; */
-        /* text-shadow: 1px 1px #000; */
-        cursor: pointer;
-      }
-      h3 {
-        margin: 8px 0px;
-        /* margin: 0%; */
-        padding: 0%;
-        color: #000;
-        /* text-shadow: 1px 1px #000; */
-      }
-      a {
-        text-decoration: none;
-      }
-      a:hover {
-        color: red;
-      }
-      .box::before {
-        content: "";
-        position: absolute;
-        top: 0.3em;
-        left: -0.6em;
-        /* display: none; */
-        transform: translateX(-50%);
-        border: 15px solid;
-        border-color: transparent #333 transparent transparent;
-        z-index: 1000;
-      }
+    
 
-      li .box {
-        width: 120px;
-        max-width: 500px;
-        position: absolute;
-        font-size: 15px;
-        top: -0.5em;
-        left: 12em;
-        display: none;
-        background-color: #333;
-        padding: 10px 15px;
-        color: rgb(173, 207, 252);
-        transition: ease;
-        transition-duration: 1s;
-        z-index: 1000;
-      }
-      li:hover .box,
-      li:hover .box::before {
-        display: block;
-      }
-
-      .flow {
-        /* text-align: center; */
-      }
-      .flow h2 {
-        /* border: 1px solid #333; */
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: underline;
-        /* color: rgb(33, 109, 209); */
-        /* font-style: italic; */
-      }
-
-      .flow img {
-        width: 800px;
-        height: 400px;
-      }
-    </style>
   </head>
 
-  <body style="margin: 0%; padding: 0%;">
-    <div class="header">
-      <h1>Mask and Social Distancing Detection</h1>
+  <body >
+  <div class="home">
+
+  
+    <div class="title">
+      <h1>Project Based Learning 2021</h1>
     </div>
+    <hr class="divide">
 
-    <div class="stat">
-      <h3>Frame Statistics</h3>
-      <ul>
-        <li style="position: relative;">
-          Persons Count:
-          <strong><span id="person" style="color: green;">0</span></strong><br />
-          <div class="box">
-            Total numbers of person detected in the frame
+    <div class="row">
+      <div class="col-xs-12 col-lg-8 vidcon align-middle justify-content-middle">
+        <div  class="vid" id="container"></div>
+        
+      </div>
+
+<!-- Modify this button -->
+<!-- 
+      <div class="d-inline" id="b">
+        <button  class="btn btn-primary" id="but" onclick="play_stop()"><b>Start</b></button>
+      </div> -->
+
+
+      <div class="col-xs-12 col-lg-4">
+        <div class="row mt-4 totalcnt border-info border-4">
+          <div class="col-xs-6 col-lg-4">
+            Total No of Peoples
           </div>
-        </li>
-        <li style="position: relative;">
-          With Mask :
-          <strong><span id="mask" style="color: green;">0</span></strong><br />
-          <div class="box">
-            Total numbers of person not wearing mask in the frame
+          <div class="col-xs-6 col-lg-4 justify-content-middle align-middle count">
+            <span id="person">0</span>
           </div>
-        </li>
-        <li style="position: relative;">
-          Without Mask :
-          <strong><span id="no_mask" style="color: red;">0</span></strong><br />
-          <div class="box">
-            Total numbers of person not wearing mask in the frame
+        </div>
+        <div class="row mt-4 totalcnt border-danger border-4">
+          <div class="col-xs-6 col-lg-4">
+            People Without Mask
           </div>
-        </li>
-        <li style="position: relative;">
-          Distance Vio :
-          <strong><span id="dist" style="color: red;">0</span></strong><br />
-          <div class="box">
-            Total numbers of persons violating social distancing in the frame
+          <div class="col-xs-6 col-lg-4 justify-content-middle align-middle count">
+            <span id="no_mask">0</span>
           </div>
-        </li>
-      </ul>
-
-      <hr style="background-color: black;" />
-
-      <a href="/analytics"
-        ><h3 style="color: rgb(33, 109, 209);">Go to Analytics</h3></a
-      >
-    </div>
-
-    <div
-      style="height: 640px; width: 90%; margin-left: auto; margin-right: auto;"
-    >
-      <div class="cont2">
-        <div id="container"></div>
-
-        <div id="b">
-          <button id="but" onclick="play_stop()"><b>Start</b></button>
+        </div>
+        <div class="row mt-4 totalcnt border-success border-4">
+          <div class="col-xs-6 col-lg-4">
+            People with Mask
+          </div>
+          <div class="col-xs-6 col-lg-4 justify-content-middle align-middle count">
+            <span id="mask">0</span>
+          </div>
+        </div>
+        <div class="row mt-4 totalcnt border-success border-4">
+          <div class="col-xs-6 col-lg-4">
+            <ul>
+              <li onclick="change_video(0)">Webcam</li>
+              <li onclick="change_video(1)">Video 1</li>
+              <li onclick="change_video(2)">Video 2</li>
+              <li onclick="change_video(3)">Video 3</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-lg-4 justify-content-middle align-middle count">
+            <span> <button  class="btn btn-warning btn-lg p-2" id="but" onclick="play_stop()"><b>Start</b></button></span>
+          </div>
         </div>
 
-        <div
-          class="img"
-          style="
-            /* height: 300px; */
-            width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-          "
-        >
-          <div
-            style="
-              width: 500px;
-              height: 20px;
-              font-size: 20px;
-              text-align: center;
-              margin-top: 4%;
-            "
-          ></div>
-          <!-- <img src="/static/flow.jpg" height="350" width="550" /> -->
-        </div>
-      </div>
-
-      <div class="right">
-        <h3>Models used</h3>
-        <ul>
-          <li style="position: relative;">
-            SSD face detector
-            <div class="box">
-              In Built Detector in CVLIB uses RESNET-50.
-            </div>
-          </li>
-
-          <li style="position: relative;">
-            YOLOv3 obj detector
-            <div class="box">
-              YoloV3-lite for Detecting objects, Here used to detect person
-            </div>
-          </li>
-
-          <li style="position: relative;">
-            Mask classifier
-            <div class="box">
-              Model Architecture inspired from vgg16, Trained on 600 images
-            </div>
-          </li>
-        </ul>
-
-        <hr style="background-color: black;" />
-
-        <h3>Dataset</h3>
-        <ul style="margin: 0%;">
-          <a href="https://www.kaggle.com/andrewmvd/face-mask-detection/"
-            ><font size="4px">Kaggle</font></a
-          >
-        </ul>
-        <hr style="background-color: black;" />
-
-        <h3>What's Different?</h3>
-        <ul>
-          <li style="position: relative;">
-            Multi Threaded
-            <div class="box">
-              Mask detection and social distancing detection run in two
-              different threads.
-            </div>
-          </li>
-          <li style="position: relative;">
-            Standalone
-            <div class="box">
-              This Solution doesn't requires Internet connection to run.
-            </div>
-          </li>
-          <li style="position: relative;">
-            Multi Camera Support
-            <div class="box">
-              This Solution can be extended to run on different inputs at the
-              same time.
-            </div>
-          </li>
-          <li style="position: relative;">
-            Session Report
-            <div class="box">
-              Both real time and post session analysis detections are present
-            </div>
-          </li>
-        </ul>
-        <hr style="background-color: black;" />
-
-        <h3>Input Files</h3>
-        <ul>
-          <li onclick="change_video(0)">Webcam</li>
-          <li onclick="change_video(1)">Video 1</li>
-          <li onclick="change_video(2)">Video 2</li>
-          <li onclick="change_video(3)">Video 3</li>
-          <!-- <li onclick="change_video(4)">Video 4</li> -->
-        </ul>
-        <hr style="background-color: black;" />
-      </div>
-      <div class="flow">
-        <!-- <h2>The entire workflow:</h2> -->
-        <img src="/static/flow.jpg" />
-      </div>
     </div>
+
+
+
+
+   
+    </div>
+  </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 
   <script type="text/javascript">
@@ -337,7 +115,7 @@
           } else {
             stop = true;
             document.getElementById("mask").innerHTML = 0;
-            document.getElementById("dist").innerHTML = 0;
+            
             document.getElementById("no_mask").innerHTML = 0;
             document.getElementById("person").innerHTML = 0;
             document.getElementById("image").remove();
@@ -371,7 +149,6 @@
           if (this.readyState == 4 && this.status == 200) {
             nos = this.responseText.split("#");
             document.getElementById("mask").innerHTML = nos[2];
-            document.getElementById("dist").innerHTML = nos[3];
             document.getElementById("no_mask").innerHTML = nos[1];
             document.getElementById("person").innerHTML = nos[0];
           }
