@@ -1,4 +1,4 @@
-# Mask and social distancing Detection
+# Face Mask Detection
 
 ### Task 1 Detecting Masks
 1. Detect faces using cvlib.detect_faces
@@ -9,17 +9,44 @@
 4. calculate centroid for all boxes
 5. feed these centroid to sklearn.DBSCAN to get the clusters.
 
-<img src="https://github.com/hitzz97/mask-dist-detection/blob/master/demo1.jpg" height="350" width="800"/>
-
 ### Multithreading 
 Run both these tasks in 2 different threads.
 
 ### Display processed frames on Browser(Flask)
 use streaming to stream the final frame from the app to the browser
 
-### Realtime and Post Session Statistics of Detections 
-Realtime person, distance violators and un masked count display
-Post Session statistics of overall detection with time for analysis.
 
-<img src="https://github.com/hitzz97/mask-dist-detection/blob/master/demo2.jpg" height="350" width="800"/>
+
+## A Glimpse of the User Interface
+#### Main Page
+![Main Page 1](.SS/ss1.png)
+![Main Page 2](.SS/ss2.png)
+
+<p> 
+So, here is a quick guide for setup on your PC and host run this project locally
+
+### 1)Clone the project onto your local Machine (From the appropriate branch)
+### 2)Create a virtual environment and install the required dependancies
+
+install python3-env and pip for creating a environment
+
+        sudo apt-get install python3-venv python3-pip
+
+
+create a virtual envirnoment
+
+        python3 -m venv env
+
+activate this virtual environment
+
+        source env/bin/activate
+
+installing all required packages which are present in requirement.txt:
+
+	    pip install -r requirements.txt
+
+
+To run the program 
+
+        FLASK_APP=stream.py flask run
 
