@@ -20,8 +20,8 @@ use streaming to stream the final frame from the app to the browser
 
 ## A Glimpse of the User Interface
 #### Main Page
-<img src="https://github.com/shrikrushnazirape/Face-Mask-Detection/blob/finalBranch/SS/ss1.png" height="350" width="800"/>
-<img src="https://github.com/shrikrushnazirape/Face-Mask-Detection/blob/finalBranch/SS/ss2.png" height="350" width="800"/>
+<img src="https://github.com/shrikrushnazirape/Face-Mask-Detection/blob/master/SS/ss1.png" height="350" width="800"/>
+<img src="https://github.com/shrikrushnazirape/Face-Mask-Detection/blob/master/SS/ss2.png" height="350" width="800"/>
 
 <p> 
 So, here is a quick guide for setup on your PC and host run this project locally
